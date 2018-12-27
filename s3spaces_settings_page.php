@@ -209,8 +209,8 @@
                    <?php echo ( defined( 'S3_SPACE_FILTER' ) ? 'disabled' : '' ); ?>/>
             <div class="s3spaces__description">
               <?php _e('By default empty or', 's3spaces'); ?><code>*</code>
-              <?php _e('Will upload all the files by default, you are free to use any Regular Expression to match and ignore the selection you need, for example:', 's3spaces'); ?>
-              <code>/^.*\.(zip|rar|docx)$/i</code>
+              <?php _e('Will upload all the files by default, you are free to use any Regular Expression, For example:', 's3spaces'); ?>
+              <code>/^.*\.(png|jp?g|bmp|gif|pdf|zip|rar|docx)$/i</code>
             </div>
           </div>
 
