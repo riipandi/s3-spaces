@@ -1,6 +1,5 @@
 === S3 Spaces Sync ===
 Contributors: Aris Ripandi
-Plugin Name: S3 Spaces Sync
 Plugin URI: https://github.com/riipandi/s3-spaces
 Author URI: https://keybase.io/riipandi/
 Donate link: https://paypal.me/riipandi
