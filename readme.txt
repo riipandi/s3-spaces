@@ -1,10 +1,14 @@
-=== Plugin Name ===
+=== S3 Spaces Sync ===
 Contributors: Aris Ripandi
+Plugin Name: S3 Spaces Sync
+Plugin URI: https://github.com/riipandi/s3-spaces
+Author URI: https://keybase.io/riipandi/
 Donate link: https://paypal.me/riipandi
-Tags: digitalocean, spaces, cloud, storage, object, s3
-Requires at least: 4.6
-Tested up to: 5.0.2
-Stable tag: 1.0.1
+Tags: digitalocean, spaces, cloud, storage, object, s3, cdn
+Requires at least: 4.9
+Tested up to: 5.0
+Requires PHP: 5.6
+Stable tag: 1.0.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
