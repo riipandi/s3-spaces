@@ -119,7 +119,7 @@ class S3_Spaces {
       'S3 Spaces Sync',
       'S3 Spaces Sync',
       'manage_options',
-      'setting_page.php',
+      's3-spaces',
       array($this, 'register_setting_page')
     );
 
