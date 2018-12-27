@@ -1,0 +1,27 @@
+{
+  "name": "riipandi/s3-spaces",
+  "type": "plugin",
+  "description": "Synchronize your WordPress media library with DigitalOcean Spaces.",
+  "keywords": [
+    "aws",
+    "s3",
+    "digitalocean",
+    "spaces",
+    "storage",
+    "wordpress"
+  ],
+  "homepage": "https://github.com/riipandi/s3-spaces",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Aris Ripandi",
+      "email": "ripandi@pm.me",
+      "homepage": "https://github.com/riipandi"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+    "katzgrau/klogger": "^1.2",
+    "league/flysystem-aws-s3-v3": "^1.0"
+  }
+}
