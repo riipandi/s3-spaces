@@ -14,19 +14,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: loader.php:27
+#: s3-spaces.php:27
 msgid ""
 "Plugin S3 Spaces Sync requires PHP 5.6.0 or higher. The plugin has "
 "now disabled itself."
 msgstr ""
 
-#: loader.php:39
+#: s3-spaces.php:39
 msgid ""
 "Plugin S3 Spaces Sync requires cURL 7.16.2+. The plugin has now "
 "disabled itself."
 msgstr ""
 
-#: loader.php:45
+#: s3-spaces.php:45
 msgid ""
 "Plugin S3 Spaces Sync requires that cURL is compiled with OpenSSL. "
 "The plugin has now disabled itself."
