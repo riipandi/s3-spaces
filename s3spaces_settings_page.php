@@ -273,17 +273,16 @@
   <div class="col-xs-12 col-xs-12 col-md-4 col-lg-4">
 
     <p>
-      <img id="img-spinner"
-           src="<?php echo plugins_url() . '/' . dirname( plugin_basename(__FILE__) ); ?>/assets/images/do_logo.svg" alt="DigitalOcean"
-           style="width: 150px;"/>
+      <img id="img-spinner" src="<?php echo plugins_url() . '/' . dirname( plugin_basename(__FILE__) ); ?>/assets/images/do_logo.svg" alt="DigitalOcean" style="width: 150px;"/>
     </p>
 
     <p>
-      This plugin syncs your WordPress library with DigitalOcean Spaces Container. It may be buggy, it may sometimes fail, feel free to write issues on github and PR.
+      This plugin syncs your WordPress library with DigitalOcean Spaces Container.
+      It may be buggy, it may sometimes fail, feel free to write issues on github and PR.
     </p>
 
     <p>
-      <a href="https://github.com/keeross/DigitalOcean-Spaces-Sync/" target="_blank">GitHub</a>
+      This plugin source available at <a href="https://github.com/riipandi/s3-spaces/" target="_blank">GitHub</a>.
     </p>
 
   </div>

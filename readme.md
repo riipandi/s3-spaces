@@ -38,8 +38,8 @@ Know how to fix this, PR welcome.
  */
 define( 'S3_SPACE_KEY',        'xxxxxxxxxxxxxxxxxxxx' );
 define( 'S3_SPACE_SECRET',     'xxxxxxxxxxxxxxxxxxxx' );
-define( 'S3_SPACE_CONTAINER',  'https://sgp1.digitaloceanspaces.com' );
-define( 'S3_SPACE_ENDPOINT',   'mywordpress' );
+define( 'S3_SPACE_CONTAINER',  'mywordpress' );
+define( 'S3_SPACE_ENDPOINT',   'https://sgp1.digitaloceanspaces.com' );
 define( 'S3_SPACE_OBJECT_ACL', 'public' );
 ```
 
