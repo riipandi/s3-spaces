@@ -30,7 +30,20 @@ it overwrites the value from settings page.
 There is a known issue with the built in Wordpress Image Editor, it will not upload changed images.
 Know how to fix this, PR welcome.
 
-### Installation
+### Example Configuration
+
+```php
+/**
+ * DigitalOcean Space Configuration
+ */
+define( 'S3_SPACE_KEY',        'xxxxxxxxxxxxxxxxxxxx' );
+define( 'S3_SPACE_SECRET',     'xxxxxxxxxxxxxxxxxxxx' );
+define( 'S3_SPACE_CONTAINER',  'https://sgp1.digitaloceanspaces.com' );
+define( 'S3_SPACE_ENDPOINT',   'mywordpress' );
+define( 'S3_SPACE_OBJECT_ACL', 'public' );
+```
+
+## Installation
 
 1. Upload plugin directory to `/wp-content/plugins/`
 2. Activate plugin through 'Plugins' menu in WordPress
