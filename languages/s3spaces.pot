@@ -119,7 +119,7 @@ msgid ""
 msgstr ""
 
 #: code/settings_page.php:180
-msgid "Storage prefix"
+msgid "Storage path"
 msgstr ""
 
 #: code/settings_page.php:189

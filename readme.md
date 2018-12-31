@@ -20,7 +20,7 @@ S3_SPACE_KEY            : DigitalOcean Spaces key
 S3_SPACE_SECRET         : DigitalOcean Spaces secret
 S3_SPACE_ENDPOINT       : DigitalOcean Spaces endpoint
 S3_SPACE_CONTAINER      : DigitalOcean Spaces container
-S3_SPACE_PREFIX         : Path to the file in the storage, will appear as a prefix
+S3_SPACE_STORAGE_PATH   : Path to the file in the storage, will appear as a prefix
 S3_SPACE_FILE_ONLY      : Keep files only in DigitalOcean Spaces or not, values (true|false)
 S3_SPACE_FILE_DELETE    : Remove files in DigitalOcean Spaces on delete or not, values (true|false)
 S3_SPACE_FILTER         : Regular expression filter
@@ -40,13 +40,7 @@ If you know how to fix this, PR welcome.
 define( 'S3_SPACE_KEY',         'XXXXXXXXXXXXXXXXXXXX' );
 define( 'S3_SPACE_SECRET',      'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' );
 define( 'S3_SPACE_ENDPOINT',    'https://sgp1.digitaloceanspaces.com' );
-define( 'S3_SPACE_CONTAINER',   'spasi' );
-
-define( 'S3_SPACE_PREFIX',      '/ar-blog' );
-define( 'S3_SPACE_CDN_URL',     'https://'.S3_SPACE_CONTAINER.'.sgp1.cdn.digitaloceanspaces.com'.S3_SPACE_PREFIX );
-define( 'S3_SPACE_UPLOAD_PATH',  ABSPATH . 'wp-content/uploads' );
-define( 'S3_SPACE_FILE_ONLY',    false );
-define( 'S3_SPACE_FILE_DELETE',  false );
+define( 'S3_SPACE_CONTAINER',   'my-wp-cdn' );
 ```
 
 ## Installation

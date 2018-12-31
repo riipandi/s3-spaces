@@ -132,7 +132,7 @@ msgid ""
 msgstr "Настройка дублирует файлы."
 
 #: code/settings_page.php:180
-msgid "Storage prefix"
+msgid "Storage path"
 msgstr "Префикс хранилища"
 
 #: code/settings_page.php:189

@@ -154,14 +154,14 @@
         <div class="row larger">
 
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
-            <label for="s3spaces_upload_url_path">
+            <label for="s3spaces_cdn_url">
               <?php _e('Full URL-path', 's3spaces'); ?>:
             </label>
           </div>
 
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
-            <input id="s3spaces_upload_url_path" name="s3spaces_upload_url_path" type="text" class="regular-text code"
-                   value="<?php echo esc_attr( defined( 'S3_SPACE_CDN_URL' ) ? S3_SPACE_CDN_URL : get_option('s3spaces_upload_url_path')  ); ?>"
+            <input id="s3spaces_cdn_url" name="s3spaces_cdn_url" type="text" class="regular-text code"
+                   value="<?php echo esc_attr( defined( 'S3_SPACE_CDN_URL' ) ? S3_SPACE_CDN_URL : get_option('s3spaces_cdn_url')  ); ?>"
                    <?php echo ( defined( 'S3_SPACE_CDN_URL' ) ? 'disabled' : '' ); ?>/>
             <div class="s3spaces__description">
               <?php _e('Enter storage public domain or subdomain if the files are stored only in the cloud storage', 's3spaces'); ?>
@@ -178,17 +178,17 @@
 
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
             <label for="s3spaces_storage_path">
-              <?php _e('Storage prefix', 's3spaces'); ?>:
+              <?php _e('Storage path', 's3spaces'); ?>:
             </label>
           </div>
 
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
             <input id="s3spaces_storage_path" name="s3spaces_storage_path" type="text" class="regular-text code"
-                   value="<?php echo esc_attr( defined( 'S3_SPACE_PREFIX' ) ? S3_SPACE_PREFIX : get_option('s3spaces_storage_path')  ); ?>"
-                   <?php echo ( defined( 'S3_SPACE_PREFIX' ) ? 'disabled' : '' ); ?>/>
+                   value="<?php echo esc_attr( defined( 'S3_SPACE_STORAGE_PATH' ) ? S3_SPACE_STORAGE_PATH : get_option('s3spaces_storage_path')  ); ?>"
+                   <?php echo ( defined( 'S3_SPACE_STORAGE_PATH' ) ? 'disabled' : '' ); ?>/>
             <div class="s3spaces__description">
               <?php _e( 'The path to the file in the storage will appear as a prefix / path.<br />For example, in your case:', 's3spaces' ); ?>
-              <code><?php echo ( defined( 'S3_SPACE_PREFIX' ) ? S3_SPACE_PREFIX : get_option('s3spaces_storage_path') ); ?></code>
+              <code><?php echo ( defined( 'S3_SPACE_STORAGE_PATH' ) ? S3_SPACE_STORAGE_PATH : get_option('s3spaces_storage_path') ); ?></code>
             </div>
           </div>
 
@@ -230,8 +230,8 @@
       <div class="row">
 
         <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" style="width: 50px;">
-          <input id="onlystorage" type="checkbox" name="s3spaces_storage_file_only"
-                 value="1" <?php echo checked( defined( 'S3_SPACE_FILE_ONLY' ) ? S3_SPACE_FILE_ONLY : get_option('s3spaces_storage_file_only'), 1 ); ?>"
+          <input id="onlystorage" type="checkbox" name="s3spaces_file_only"
+                 value="1" <?php echo checked( defined( 'S3_SPACE_FILE_ONLY' ) ? S3_SPACE_FILE_ONLY : get_option('s3spaces_file_only'), 1 ); ?>"
                  <?php echo ( defined( 'S3_SPACE_FILE_ONLY' ) ? 'disabled' : '' ); ?> />
         </div>
 
@@ -245,8 +245,8 @@
       <div class="row">
 
         <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-          <input id="s3spaces_storage_file_delete" type="checkbox" name="s3spaces_storage_file_delete"
-                 value="1" <?php echo checked( defined( 'S3_SPACE_FILE_DELETE' ) ? S3_SPACE_FILE_DELETE : get_option('s3spaces_storage_file_delete'), 1 ); ?>"
+          <input id="s3spaces_file_delete" type="checkbox" name="s3spaces_file_delete"
+                 value="1" <?php echo checked( defined( 'S3_SPACE_FILE_DELETE' ) ? S3_SPACE_FILE_DELETE : get_option('s3spaces_file_delete'), 1 ); ?>"
                  <?php echo ( defined( 'S3_SPACE_FILE_DELETE' ) ? 'disabled' : '' ); ?> />
         </div>
 
