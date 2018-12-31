@@ -29,7 +29,7 @@ S3_SPACE_CDN_URL        : Full url to the files, WP Constant
 S3_SPACE_UPLOAD_PATH    : Path to the local files, WP Constant
 ```
 
-There is a known issue with the built in Wordpress Image Editor, it will not upload changed images.
+There is a known issue with the built in Image Editor, it will not upload changed images.
 If you know how to fix this, PR welcome.
 
 ### Example Configuration
