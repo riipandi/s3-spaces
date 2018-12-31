@@ -85,7 +85,7 @@ msgid "File & Path settings"
 msgstr ""
 
 #: code/settings_page.php:137
-msgid "Full URL-path to files"
+msgid "Full URL-path"
 msgstr ""
 
 #: code/settings_page.php:146
@@ -129,7 +129,7 @@ msgid ""
 msgstr ""
 
 #: code/settings_page.php:200
-msgid "Filemask/Regex for ignored files"
+msgid "Filemask / regex"
 msgstr ""
 
 #: code/settings_page.php:208

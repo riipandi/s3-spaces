@@ -135,7 +135,7 @@
 
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
             <label for="s3spaces_upload_url_path">
-              <?php _e('Full URL-path to files', 's3spaces'); ?>:
+              <?php _e('Full URL-path', 's3spaces'); ?>:
             </label>
           </div>
 
@@ -199,7 +199,7 @@
 
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
             <label for="s3spaces_filter">
-              <?php _e('Filemask/Regex for ignored files', 's3spaces'); ?>:
+              <?php _e('Filemask / regex', 's3spaces'); ?>:
             </label>
           </div>
 
@@ -210,7 +210,7 @@
             <div class="s3spaces__description">
               <?php _e('By default empty or', 's3spaces'); ?><code>*</code>
               <?php _e('Will upload all the files by default, you are free to use any Regular Expression, For example:', 's3spaces'); ?>
-              <code>/^.*\.(png|jp?g|bmp|gif|pdf|zip|rar|docx)$/i</code>
+              <code>/^.*\.(png|jp?g|pdf|zip|rar|docx)$/i</code>
             </div>
           </div>
 

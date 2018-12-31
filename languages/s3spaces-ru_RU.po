@@ -92,7 +92,7 @@ msgid "File & Path settings"
 msgstr "Настройки файлов и ссылок"
 
 #: code/settings_page.php:137
-msgid "Full URL-path to files"
+msgid "Full URL-path"
 msgstr "Полная ссылка на файлы"
 
 #: code/settings_page.php:146
@@ -142,7 +142,7 @@ msgid ""
 msgstr "Ссылка"
 
 #: code/settings_page.php:200
-msgid "Filemask/Regex for ignored files"
+msgid "Filemask / regex"
 msgstr "Фильтр для игнорирования файлов"
 
 #: code/settings_page.php:208
