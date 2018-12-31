@@ -1,5 +1,6 @@
 === S3 Spaces Sync ===
 Contributors: keeross, riespandi
+Donate link: https://paypal.me/riipandi/
 Tags: media, storage, aws, digitalocean, s3, space, sync
 Requires at least: 4.6
 Tested up to: 5.9.2

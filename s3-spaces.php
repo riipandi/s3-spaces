@@ -30,16 +30,6 @@ require dirname(__FILE__) . DIRECTORY_SEPARATOR . 's3spaces_class_filesystem.php
 
 load_plugin_textdomain('s3spaces', false, dirname(plugin_basename(__FILE__)) . '/lang');
 
-// Add settings link
-function s3spaces_add_settings_link( $links ) {
-    $settings_link = '<a href="options-general.php?page=s3-spaces">' . __( 'Settings' ) . '</a>';
-    array_push( $links, $settings_link );
-  	return $links;
-}
-
-$plugin = plugin_basename( __FILE__ );
-add_filter( "plugin_action_links_$plugin", 's3spaces_add_settings_link' );
-
 function s3spaces_incompatibile($msg) {
   require_once ABSPATH . DIRECTORY_SEPARATOR . 'wp-admin' . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'plugin.php';
   deactivate_plugins(__FILE__);

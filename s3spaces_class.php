@@ -74,6 +74,8 @@ class S3_Spaces {
 
   private function register_filters () {
 
+    add_filter( "plugin_action_links_s3spaces", 'filter_add_settings_link' );
+
     add_filter('wp_update_attachment_metadata', array($this, 'filter_wp_update_attachment_metadata'), 20, 1);
     // add_filter('wp_save_image_editor_file', array($this,'filter_wp_save_image_editor_file'), 10, 5 );
     add_filter('wp_unique_filename', array($this, 'filter_wp_unique_filename') );
@@ -191,6 +193,12 @@ class S3_Spaces {
 
     return $new_filename;
 
+  }
+
+  private function filter_add_settings_link( $links ) {
+      $settings_link = '<a href="options-general.php?page=s3-spaces">' . __( 'Settings' ) . '</a>';
+      array_push( $links, $settings_link );
+      return $links;
   }
 
   // ACTIONS
