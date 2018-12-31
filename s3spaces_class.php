@@ -25,11 +25,11 @@ class S3_Spaces {
 				defined( 'S3_SPACE_SECRET' ) ? S3_SPACE_SECRET : null,
         defined( 'S3_SPACE_CONTAINER' ) ? S3_SPACE_CONTAINER : null,
         defined( 'S3_SPACE_ENDPOINT' ) ? S3_SPACE_ENDPOINT : null,
-        defined( 'S3_SPACE_STORAGE_PATH' ) ? S3_SPACE_STORAGE_PATH : null,
-        defined( 'S3_SPACE_STORAGE_FILE_ONLY' ) ? S3_SPACE_STORAGE_FILE_ONLY : null,
-        defined( 'S3_SPACE_STORAGE_FILE_DELETE' ) ? S3_SPACE_STORAGE_FILE_DELETE : null,
+        defined( 'S3_SPACE_PREFIX' ) ? S3_SPACE_PREFIX : null,
+        defined( 'S3_SPACE_FILE_ONLY' ) ? S3_SPACE_FILE_ONLY : null,
+        defined( 'S3_SPACE_FILE_DELETE' ) ? S3_SPACE_FILE_DELETE : null,
         defined( 'S3_SPACE_FILTER' ) ? S3_SPACE_FILTER : null,
-        defined( 'S3_SPACE_UPLOAD_URL_PATH' ) ? S3_SPACE_UPLOAD_URL_PATH : null,
+        defined( 'S3_SPACE_CDN_URL' ) ? S3_SPACE_CDN_URL : null,
         defined( 'S3_SPACE_UPLOAD_PATH' ) ? S3_SPACE_UPLOAD_PATH : null
 			);
 		}
@@ -45,8 +45,8 @@ class S3_Spaces {
     $this->storage_file_only   = empty($storage_file_only) ? get_option('s3spaces_storage_file_only') : $storage_file_only;
     $this->storage_file_delete = empty($storage_file_delete) ? get_option('s3spaces_storage_file_delete') : $storage_file_delete;
     $this->filter              = empty($filter) ? get_option('s3spaces_filter') : $filter;
-    $this->upload_url_path     = empty($upload_url_path) ? get_option('upload_url_path') : $upload_url_path;
-    $this->upload_path         = empty($upload_path) ? get_option('upload_path') : $upload_path;
+    $this->upload_url_path     = empty($upload_url_path) ? get_option('s3spaces_upload_url_path') : $upload_url_path;
+    $this->upload_path         = empty($upload_path) ? get_option('s3spaces_upload_path') : $upload_path;
 	}
 
   // SETUP
@@ -104,8 +104,8 @@ class S3_Spaces {
     register_setting('s3spaces_settings', 's3spaces_storage_file_delete');
     register_setting('s3spaces_settings', 's3spaces_filter');
     // register_setting('s3spaces_settings', 's3spaces_debug');
-    register_setting('s3spaces_settings', 'upload_url_path');
-    register_setting('s3spaces_settings', 'upload_path');
+    register_setting('s3spaces_settings', 's3spaces_upload_url_path');
+    register_setting('s3spaces_settings', 's3spaces_upload_path');
 
   }
 
