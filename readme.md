@@ -38,7 +38,7 @@ If you know how to fix this, PR welcome.
  * DigitalOcean Space Configuration
  */
 define( 'S3_SPACE_KEY',         'XXXXXXXXXXXXXXXXXXXX' );
-define( 'S3_SPACE_SECRET',      'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' );
+define( 'S3_SPACE_SECRET',      'XXXXXXXXXXXXXXXXXXXX' );
 define( 'S3_SPACE_ENDPOINT',    'https://sgp1.digitaloceanspaces.com' );
 define( 'S3_SPACE_CONTAINER',   'my-wp-cdn' );
 ```

@@ -57,15 +57,15 @@ msgid "Connection settings"
 msgstr ""
 
 #: code/settings_page.php:48
-msgid "DO Spaces Key"
+msgid "Spaces Key"
 msgstr ""
 
 #: code/settings_page.php:64
-msgid "DO Spaces Secret"
+msgid "Spaces Secret"
 msgstr ""
 
 #: code/settings_page.php:80
-msgid "DO Spaces Container"
+msgid "Spaces Container"
 msgstr ""
 
 #: code/settings_page.php:96

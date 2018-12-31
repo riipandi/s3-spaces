@@ -45,7 +45,7 @@
 
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
             <label for="s3spaces_key">
-              <?php _e('DO Spaces Key', 's3spaces'); ?>:
+              <?php _e('Spaces Key', 's3spaces'); ?>:
             </label>
           </div>
 
@@ -61,7 +61,7 @@
 
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
             <label for="s3spaces_secret">
-              <?php _e('DO Spaces Secret', 's3spaces'); ?>:
+              <?php _e('Spaces Secret', 's3spaces'); ?>:
             </label>
           </div>
 
@@ -77,7 +77,7 @@
 
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
             <label for="s3spaces_container">
-              <?php _e('DO Spaces Container', 's3spaces'); ?>:
+              <?php _e('Spaces Container', 's3spaces'); ?>:
             </label>
           </div>
 
