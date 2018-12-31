@@ -109,7 +109,7 @@ msgid "Local path"
 msgstr ""
 
 #: code/settings_page.php:169
-msgid "Local path to the uploaded files. By default"
+msgid "Local path to the uploaded files. Default"
 msgstr ""
 
 #: code/settings_page.php:170
