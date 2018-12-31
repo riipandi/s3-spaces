@@ -36,11 +36,16 @@ Know how to fix this, PR welcome.
 /**
  * DigitalOcean Space Configuration
  */
-define( 'S3_SPACE_KEY',        'xxxxxxxxxxxxxxxxxxxx' );
-define( 'S3_SPACE_SECRET',     'xxxxxxxxxxxxxxxxxxxx' );
-define( 'S3_SPACE_CONTAINER',  'mywordpress' );
+define( 'S3_SPACE_KEY',        'XXXXXXXXXXXXXXXXXXXX' );
+define( 'S3_SPACE_SECRET',     'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' );
 define( 'S3_SPACE_ENDPOINT',   'https://sgp1.digitaloceanspaces.com' );
-define( 'S3_SPACE_OBJECT_ACL', 'public' );
+define( 'S3_SPACE_CONTAINER',  'oryza' );
+
+define( 'S3_SPACE_STORAGE_PATH',        '/myblog' );
+define( 'S3_SPACE_UPLOAD_URL_PATH',     'https://'.S3_SPACE_CONTAINER.'.sgp1.cdn.digitaloceanspaces.com'.S3_SPACE_STORAGE_PATH );
+define( 'S3_SPACE_UPLOAD_PATH',          ABSPATH . 'wp-content/uploads' );
+define( 'S3_SPACE_STORAGE_FILE_ONLY',    false );
+define( 'S3_SPACE_STORAGE_FILE_DELETE',  false );
 ```
 
 ## Installation

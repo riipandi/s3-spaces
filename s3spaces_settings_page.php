@@ -141,8 +141,8 @@
 
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
             <input id="upload_url_path" name="upload_url_path" type="text" class="regular-text code"
-                   value="<?php echo esc_attr( defined( 'UPLOAD_URL_PATH' ) ? UPLOAD_URL_PATH : get_option('upload_url_path')  ); ?>"
-                   <?php echo ( defined( 'UPLOAD_URL_PATH' ) ? 'disabled' : '' ); ?>/>
+                   value="<?php echo esc_attr( defined( 'S3_SPACE_UPLOAD_URL_PATH' ) ? S3_SPACE_UPLOAD_URL_PATH : get_option('upload_url_path')  ); ?>"
+                   <?php echo ( defined( 'S3_SPACE_UPLOAD_URL_PATH' ) ? 'disabled' : '' ); ?>/>
             <div class="s3spaces__description">
               <?php _e('Enter storage public domain or subdomain if the files are stored only in the cloud storage', 's3spaces'); ?>
               <code>(http://uploads.example.com)</code>,
@@ -164,8 +164,8 @@
 
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
             <input id="upload_path" name="upload_path" type="text" class="regular-text code"
-                   value="<?php echo esc_attr( defined( 'UPLOAD_PATH' ) ? UPLOAD_PATH : get_option('upload_path')  ); ?>"
-                   <?php echo ( defined( 'UPLOAD_PATH' ) ? 'disabled' : '' ); ?>
+                   value="<?php echo esc_attr( defined( 'S3_SPACE_UPLOAD_PATH' ) ? S3_SPACE_UPLOAD_PATH : get_option('upload_path')  ); ?>"
+                   <?php echo ( defined( 'S3_SPACE_UPLOAD_PATH' ) ? 'disabled' : '' ); ?>
                    placeholder="<?php echo ABSPATH;?>wp-content/uploads"/>
             <div class="s3spaces__description">
               <?php _e('Local path to the uploaded files. By default', 's3spaces'); ?>: <code>wp-content/uploads</code>

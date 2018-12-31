@@ -29,8 +29,8 @@ class S3_Spaces {
         defined( 'S3_SPACE_STORAGE_FILE_ONLY' ) ? S3_SPACE_STORAGE_FILE_ONLY : null,
         defined( 'S3_SPACE_STORAGE_FILE_DELETE' ) ? S3_SPACE_STORAGE_FILE_DELETE : null,
         defined( 'S3_SPACE_FILTER' ) ? S3_SPACE_FILTER : null,
-        defined( 'S3_SPACE_UPLOAD_URL_PATH' ) ? UPLOAD_URL_PATH : null,
-        defined( 'S3_SPACE_UPLOAD_PATH' ) ? UPLOAD_PATH : null
+        defined( 'S3_SPACE_UPLOAD_URL_PATH' ) ? S3_SPACE_UPLOAD_URL_PATH : null,
+        defined( 'S3_SPACE_UPLOAD_PATH' ) ? S3_SPACE_UPLOAD_PATH : null
 			);
 		}
 		return self::$instance;
