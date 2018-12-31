@@ -1,17 +1,12 @@
 === S3 Spaces Sync ===
-Contributors: riespandi
-Plugin URI: https://github.com/riipandi/s3-spaces
-Author URI: https://keybase.io/riipandi/
-Donate link: https://paypal.me/riipandi
-Tags: digitalocean, spaces, cloud, storage, object, s3, cdn
-Requires at least: 4.9
-Tested up to: 5.0
-Requires PHP: 5.6
+Contributors: keeross, riespandi
+Tags: media, storage, aws, digitalocean, s3, space, sync
+Requires at least: 4.6
+Tested up to: 5.9.2
 Stable tag: 1.0.0
-License: MIT
-License URI: https://opensource.org/licenses/MIT
+Requires PHP: 5.6
 
-Synchronize your WordPress media library with DigitalOcean Spaces.
+This plugin is allow you to synchronize your WordPress media library with DigitalOcean Spaces.
 
 == Description ==
 

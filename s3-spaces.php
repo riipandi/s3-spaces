@@ -1,15 +1,29 @@
 <?php
 /**
- * Plugin Name: S3 Spaces Sync
- * Plugin URI: https://github.com/riipandi/s3-spaces
- * Description: Synchronize your WordPress media library with DigitalOcean Spaces.
- * Version: 1.0.0
- * Author: Aris Ripandi
- * Author URI: https://keybase.io/riipandi
- * License: MIT
- * Text Domain: s3spaces
- * Domain Path: /languages
+ * The plugin bootstrap file
+ *
+ * This file is read by WordPress to generate the plugin information in the plugin
+ * admin area. This file also includes all of the dependencies used by the plugin,
+ * registers the activation and deactivation functions, and defines a function
+ * that starts the plugin.
+ *
+ * @wordpress-plugin
+ * Plugin Name:       S3 Spaces Sync
+ * Plugin URI:        https://wordpress.org/plugins/s3-spaces/
+ * Description:       Synchronize your WordPress media library with DigitalOcean Spaces.
+ * Version:           1.0.0
+ * Author:            Aris Ripandi
+ * Author URI:        https://keybase.io/riipandi
+ * License:           MIT
+ * License URI:       https://opensource.org/licenses/MIT
+ * Text Domain:       s3spaces
+ * Domain Path:       /languages
  */
+
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+  die;
+}
 
 require dirname(__FILE__) . DIRECTORY_SEPARATOR . 's3spaces_class.php';
 require dirname(__FILE__) . DIRECTORY_SEPARATOR . 's3spaces_class_filesystem.php';
