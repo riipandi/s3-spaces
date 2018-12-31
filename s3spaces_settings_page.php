@@ -131,6 +131,27 @@
 
       <div class="s3spaces__block">
 
+        <div class="row">
+
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+            <label for="s3spaces_upload_path">
+              <?php _e('Local path', 's3spaces'); ?>:
+            </label>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
+            <input id="s3spaces_upload_path" name="s3spaces_upload_path" type="text" class="regular-text code"
+                   value="<?php echo esc_attr( defined( 'S3_SPACE_UPLOAD_PATH' ) ? S3_SPACE_UPLOAD_PATH : get_option('s3spaces_upload_path')  ); ?>"
+                   <?php echo ( defined( 'S3_SPACE_UPLOAD_PATH' ) ? 'disabled' : '' ); ?>
+                   placeholder="<?php echo ABSPATH;?>wp-content/uploads"/>
+            <div class="s3spaces__description">
+              <?php _e('Local path to the uploaded files. By default', 's3spaces'); ?>: <code>wp-content/uploads</code>
+              <?php _e('Setting duplicates of the same name from the mediafiles settings. Changing one, you change and other', 's3spaces'); ?>.
+            </div>
+          </div>
+
+        </div>
+
         <div class="row larger">
 
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
@@ -149,27 +170,6 @@
               <?php _e('or full URL path, if are kept both in cloud and on the server.','s3spaces'); ?>
               <code>(http://example.com/wp-content/uploads)</code>.</p>
               <?php _e('In that case duplicates are created. If you change one, you change and the other,','s3spaces'); ?>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="row">
-
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
-            <label for="s3spaces_upload_path">
-              <?php _e('Local path', 's3spaces'); ?>:
-            </label>
-          </div>
-
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
-            <input id="s3spaces_upload_path" name="s3spaces_upload_path" type="text" class="regular-text code"
-                   value="<?php echo esc_attr( defined( 'S3_SPACE_UPLOAD_PATH' ) ? S3_SPACE_UPLOAD_PATH : get_option('s3spaces_upload_path')  ); ?>"
-                   <?php echo ( defined( 'S3_SPACE_UPLOAD_PATH' ) ? 'disabled' : '' ); ?>
-                   placeholder="<?php echo ABSPATH;?>wp-content/uploads"/>
-            <div class="s3spaces__description">
-              <?php _e('Local path to the uploaded files. By default', 's3spaces'); ?>: <code>wp-content/uploads</code>
-              <?php _e('Setting duplicates of the same name from the mediafiles settings. Changing one, you change and other', 's3spaces'); ?>.
             </div>
           </div>
 
