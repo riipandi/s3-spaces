@@ -16,16 +16,18 @@ it overwrites the value from settings page.
 
 ### Contants Description
 
-- `S3_SPACE_KEY` - DigitalOcean Spaces key
-- `S3_SPACE_SECRET` - DigitalOcean Spaces secret
-- `S3_SPACE_ENDPOINT` - DigitalOcean Spaces endpoint
-- `S3_SPACE_CONTAINER` - DigitalOcean Spaces container
-- `S3_SPACE_PREFIX` - The path to the file in the storage, will appear as a prefix
-- `S3_SPACE_FILE_ONLY` - Keep files only in DigitalOcean Spaces or not, values (true|false)
-- `S3_SPACE_FILE_DELETE` - Remove files in DigitalOcean Spaces on delete or not, values (true|false)
-- `S3_SPACE_FILTER` - A Regex filter
-- `S3_SPACE_CDN_URL` - A full url to the files, WP Constant
-- `S3_SPACE_UPLOAD_PATH` - A path to the local files, WP Constant
+```txt
+S3_SPACE_KEY            : DigitalOcean Spaces key
+S3_SPACE_SECRET         : DigitalOcean Spaces secret
+S3_SPACE_ENDPOINT       : DigitalOcean Spaces endpoint
+S3_SPACE_CONTAINER      : DigitalOcean Spaces container
+S3_SPACE_PREFIX         : The path to the file in the storage, will appear as a prefix
+S3_SPACE_FILE_ONLY      : Keep files only in DigitalOcean Spaces or not, values (true|false)
+S3_SPACE_FILE_DELETE    : Remove files in DigitalOcean Spaces on delete or not, values (true|false)
+S3_SPACE_FILTER         : A Regex filter
+S3_SPACE_CDN_URL        : A full url to the files, WP Constant
+S3_SPACE_UPLOAD_PATH    : A path to the local files, WP Constant
+```
 
 There is a known issue with the built in Wordpress Image Editor, it will not upload changed images.
 Know how to fix this, PR welcome.
@@ -40,8 +42,8 @@ define( 'S3_SPACE_KEY',         'XXXXXXXXXXXXXXXXXXXX' );
 define( 'S3_SPACE_SECRET',      'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' );
 define( 'S3_SPACE_ENDPOINT',    'https://sgp1.digitaloceanspaces.com' );
 define( 'S3_SPACE_CONTAINER',   'spasi' );
-define( 'S3_SPACE_PREFIX',      '/ar-blog' );
 
+define( 'S3_SPACE_PREFIX',      '/ar-blog' );
 define( 'S3_SPACE_CDN_URL',     'https://'.S3_SPACE_CONTAINER.'.sgp1.cdn.digitaloceanspaces.com'.S3_SPACE_PREFIX );
 define( 'S3_SPACE_UPLOAD_PATH',  ABSPATH . 'wp-content/uploads' );
 define( 'S3_SPACE_FILE_ONLY',    false );
