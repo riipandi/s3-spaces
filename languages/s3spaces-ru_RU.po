@@ -122,7 +122,7 @@ msgid "Local path"
 msgstr "Локальная ссылка"
 
 #: code/settings_page.php:169
-msgid "Local path to the uploaded files. Default"
+msgid "Local path to the uploaded files. By default"
 msgstr "Локальная ссылка к загруженным файлам. По умолчанию"
 
 #: code/settings_page.php:170
@@ -132,7 +132,7 @@ msgid ""
 msgstr "Настройка дублирует файлы."
 
 #: code/settings_page.php:180
-msgid "Storage path"
+msgid "Storage prefix"
 msgstr "Префикс хранилища"
 
 #: code/settings_page.php:189

@@ -2,3 +2,7 @@
 vendor
 logs/**.txt
 sftp-config.json
+
+.DS_Store
+.idea/
+*.phar

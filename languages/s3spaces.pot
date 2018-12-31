@@ -109,7 +109,7 @@ msgid "Local path"
 msgstr ""
 
 #: code/settings_page.php:169
-msgid "Local path to the uploaded files. Default"
+msgid "Local path to the uploaded files. By default"
 msgstr ""
 
 #: code/settings_page.php:170
@@ -119,7 +119,7 @@ msgid ""
 msgstr ""
 
 #: code/settings_page.php:180
-msgid "Storage path"
+msgid "Storage prefix"
 msgstr ""
 
 #: code/settings_page.php:189

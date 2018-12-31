@@ -15,10 +15,11 @@ class S3_Space_Filesystem {
         'key'    => $key,
         'secret' => $secret,
       ],
-      'bucket'   => 'do-spaces',
+      'bucket' => 'do-spaces',
       'endpoint' => $endpoint,
-      'version'  => 'latest',
-      'region'   => 'us-east-1', // needed for aws client
+      'version' => 'latest',
+      // region means nothing for DO Spaces, but aws client may drop and error without it
+      'region' => 'us-east-1',
     ]);
 
     $connection = new AwsS3Adapter($client, $container);

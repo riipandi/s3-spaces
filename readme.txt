@@ -3,7 +3,7 @@ Contributors: keeross, riespandi
 Donate link: https://paypal.me/riipandi/
 Tags: media, storage, aws, digitalocean, s3, space, sync
 Requires at least: 4.6
-Tested up to: 5.9.2
+Tested up to: 5.0.2
 Stable tag: 1.0.0
 Requires PHP: 5.6
 
@@ -42,6 +42,14 @@ There is a known issue with the built in Wordpress Image Editor, it will not upl
 == Screenshots ==
 
 1. Configuration screen
+
+== Frequently Asked Questions ==
+
+:TODO
+
+== Upgrade Notice ==
+
+:TODO
 
 == Changelog ==
 

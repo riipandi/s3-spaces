@@ -8,10 +8,10 @@ class S3_Spaces {
   private        $endpoint;
   private        $container;
   private        $storage_path;
-  private        $file_only;
-  private        $file_delete;
+  private        $storage_file_only;
+  private        $storage_file_delete;
   private        $filter;
-  private        $cdn_url;
+  private        $upload_url_path;
   private        $upload_path;
 
 	/**
@@ -26,27 +26,27 @@ class S3_Spaces {
         defined( 'S3_SPACE_CONTAINER' ) ? S3_SPACE_CONTAINER : null,
         defined( 'S3_SPACE_ENDPOINT' ) ? S3_SPACE_ENDPOINT : null,
         defined( 'S3_SPACE_STORAGE_PATH' ) ? S3_SPACE_STORAGE_PATH : null,
-        defined( 'S3_SPACE_FILE_ONLY' ) ? S3_SPACE_FILE_ONLY : null,
-        defined( 'S3_SPACE_FILE_DELETE' ) ? S3_SPACE_FILE_DELETE : null,
+        defined( 'S3_SPACE_STORAGE_FILE_ONLY' ) ? S3_SPACE_STORAGE_FILE_ONLY : null,
+        defined( 'S3_SPACE_STORAGE_FILE_DELETE' ) ? S3_SPACE_STORAGE_FILE_DELETE : null,
         defined( 'S3_SPACE_FILTER' ) ? S3_SPACE_FILTER : null,
-        defined( 'S3_SPACE_CDN_URL' ) ? S3_SPACE_CDN_URL : null,
-        defined( 'S3_SPACE_UPLOAD_PATH' ) ? S3_SPACE_UPLOAD_PATH : null
+        defined( 'S3_SPACE_UPLOAD_URL_PATH' ) ? UPLOAD_URL_PATH : null,
+        defined( 'S3_SPACE_UPLOAD_PATH' ) ? UPLOAD_PATH : null
 			);
 		}
 		return self::$instance;
   }
 
-	public function __construct( $key, $secret, $container, $endpoint, $storage_path, $file_only, $file_delete, $filter, $cdn_url, $upload_path ) {
+	public function __construct( $key, $secret, $container, $endpoint, $storage_path, $storage_file_only, $storage_file_delete, $filter, $upload_url_path, $upload_path ) {
 		$this->key                 = empty($key) ? get_option('s3spaces_key') : $key;
 		$this->secret              = empty($secret) ? get_option('s3spaces_secret') : $secret;
     $this->endpoint            = empty($endpoint) ? get_option('s3spaces_endpoint') : $endpoint;
     $this->container           = empty($container) ? get_option('s3spaces_container') : $container;
     $this->storage_path        = empty($storage_path) ? get_option('s3spaces_storage_path') : $storage_path;
-    $this->file_only           = empty($file_only) ? get_option('s3spaces_file_only') : $file_only;
-    $this->file_delete         = empty($file_delete) ? get_option('s3spaces_file_delete') : $file_delete;
+    $this->storage_file_only   = empty($storage_file_only) ? get_option('s3spaces_storage_file_only') : $storage_file_only;
+    $this->storage_file_delete = empty($storage_file_delete) ? get_option('s3spaces_storage_file_delete') : $storage_file_delete;
     $this->filter              = empty($filter) ? get_option('s3spaces_filter') : $filter;
-    $this->cdn_url             = empty($cdn_url) ? get_option('s3spaces_cdn_url') : $cdn_url;
-    $this->upload_path         = empty($upload_path) ? get_option('s3spaces_upload_path') : $upload_path;
+    $this->upload_url_path     = empty($upload_url_path) ? get_option('upload_url_path') : $upload_url_path;
+    $this->upload_path         = empty($upload_path) ? get_option('upload_path') : $upload_path;
 	}
 
   // SETUP
@@ -74,8 +74,6 @@ class S3_Spaces {
 
   private function register_filters () {
 
-    add_filter( "plugin_action_links_s3spaces", array($this, 'filter_add_settings_link') );
-
     add_filter('wp_update_attachment_metadata', array($this, 'filter_wp_update_attachment_metadata'), 20, 1);
     // add_filter('wp_save_image_editor_file', array($this,'filter_wp_save_image_editor_file'), 10, 5 );
     add_filter('wp_unique_filename', array($this, 'filter_wp_unique_filename') );
@@ -102,12 +100,12 @@ class S3_Spaces {
     register_setting('s3spaces_settings', 's3spaces_endpoint');
     register_setting('s3spaces_settings', 's3spaces_container');
     register_setting('s3spaces_settings', 's3spaces_storage_path');
-    register_setting('s3spaces_settings', 's3spaces_file_only');
-    register_setting('s3spaces_settings', 's3spaces_file_delete');
+    register_setting('s3spaces_settings', 's3spaces_storage_file_only');
+    register_setting('s3spaces_settings', 's3spaces_storage_file_delete');
     register_setting('s3spaces_settings', 's3spaces_filter');
     // register_setting('s3spaces_settings', 's3spaces_debug');
-    register_setting('s3spaces_settings', 's3spaces_cdn_url');
-    register_setting('s3spaces_settings', 's3spaces_upload_path');
+    register_setting('s3spaces_settings', 'upload_url_path');
+    register_setting('s3spaces_settings', 'upload_path');
 
   }
 
@@ -180,7 +178,7 @@ class S3_Spaces {
     $upload_dir = wp_upload_dir();
     $subdir = $upload_dir['subdir'];
 
-    $filesystem = S3_Space_Filesystem::get_instance($this->key, $this->secret, $this->container, $this->endpoint);
+    $filesystem = S3_SPACE_Filesystem::get_instance($this->key, $this->secret, $this->container, $this->endpoint);
 
     $number = 1;
     $new_filename = $filename;
@@ -193,12 +191,6 @@ class S3_Spaces {
 
     return $new_filename;
 
-  }
-
-  private function filter_add_settings_link( $links ) {
-      $settings_link = '<a href="options-general.php?page=s3-spaces">' . __( 'Settings' ) . '</a>';
-      array_push( $links, $settings_link );
-      return $links;
   }
 
   // ACTIONS
@@ -278,7 +270,7 @@ class S3_Spaces {
 
     try {
 
-      $filesystem = S3_Space_Filesystem::get_instance($this->key, $this->secret, $this->container, $this->endpoint);
+      $filesystem = S3_SPACE_Filesystem::get_instance($this->key, $this->secret, $this->container, $this->endpoint);
       $filesystem->write('test.txt', 'test');
       $filesystem->delete('test.txt');
       // $exists = $filesystem->has('photo.jpg');
@@ -323,7 +315,7 @@ class S3_Spaces {
   public function file_upload ($file) {
 
     // init cloud filesystem
-    $filesystem = S3_Space_Filesystem::get_instance($this->key, $this->secret, $this->container, $this->endpoint);
+    $filesystem = S3_SPACE_Filesystem::get_instance($this->key, $this->secret, $this->container, $this->endpoint);
     $regex_string = $this->filter;
 
     // prepare regex
@@ -344,7 +336,7 @@ class S3_Spaces {
         ]);
 
         // remove on upload
-        if ( $this->file_only == 1 ) {
+        if ( $this->storage_file_only == 1 ) {
 
           unlink($file);
 
@@ -364,12 +356,12 @@ class S3_Spaces {
 
   public function file_delete ($file) {
 
-    if ( $this->file_delete == 1 ) {
+    if ( $this->storage_file_delete == 1 ) {
 
       try {
 
         $filepath = $this->file_path($file);
-        $filesystem = S3_Space_Filesystem::get_instance($this->key, $this->secret, $this->container, $this->endpoint);
+        $filesystem = S3_SPACE_Filesystem::get_instance($this->key, $this->secret, $this->container, $this->endpoint);
 
         $filesystem->delete( $filepath );
 
