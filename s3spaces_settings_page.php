@@ -142,11 +142,10 @@
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
             <input id="s3spaces_upload_path" name="s3spaces_upload_path" type="text" class="regular-text code"
                    value="<?php echo esc_attr( defined( 'S3_SPACE_UPLOAD_PATH' ) ? S3_SPACE_UPLOAD_PATH : get_option('s3spaces_upload_path')  ); ?>"
-                   <?php echo ( defined( 'S3_SPACE_UPLOAD_PATH' ) ? 'disabled' : '' ); ?>
-                   placeholder="<?php echo ABSPATH;?>wp-content/uploads"/>
+                   <?php echo ( defined( 'S3_SPACE_UPLOAD_PATH' ) ? 'disabled' : '' ); ?>/>
             <div class="s3spaces__description">
-              <?php _e('Local path to the uploaded files. By default', 's3spaces'); ?>: <code>wp-content/uploads</code>
-              <?php _e('Setting duplicates of the same name from the mediafiles settings. Changing one, you change and other', 's3spaces'); ?>.
+              <?php _e('Local path to the uploaded files. Default', 's3spaces'); ?>: <code><?php echo ABSPATH;?>wp-content/uploads</code>
+              <!-- <?php _e('Setting duplicates of the same name from the mediafiles settings. Changing one, you change and other', 's3spaces'); ?>. -->
             </div>
           </div>
 
