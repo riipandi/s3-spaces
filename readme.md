@@ -9,10 +9,9 @@ to simuntanously upload and delete files, replacing public media URL with relati
 storage links. You can choose between two options, to keep local copy of the files, or to
 delete them and keep files only in cloud storage.
 
-In order to use this plugin, you have to create a DigitalOcean Spaces API key.
-
-You may now define constants in order to configure the plugin. If the constant is defined,
-it overwrites the value from settings page.
+In order to use this plugin, you have to create a DigitalOcean Spaces API key. You may
+to define constants in order to configure the plugin. If the constant is defined, it
+overwrites the value from settings page.
 
 ### Contants Description
 
