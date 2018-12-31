@@ -17,13 +17,12 @@ require dirname(__FILE__) . DIRECTORY_SEPARATOR . 's3spaces_class_filesystem.php
 load_plugin_textdomain('s3spaces', false, dirname(plugin_basename(__FILE__)) . '/lang');
 
 // Add settings link
+$plugin = plugin_basename( __FILE__ );
 function s3spaces_add_settings_link( $links ) {
-    $settings_link = '<a href="options-general.php?page=s3-spaces">' . __( 'Settings' ) . '</a>';
+    $settings_link = '<a href="options-general.php?page='.$plugin.'">' . __( 'Settings' ) . '</a>';
     array_push( $links, $settings_link );
   	return $links;
 }
-
-$plugin = plugin_basename( __FILE__ );
 add_filter( "plugin_action_links_$plugin", 's3spaces_add_settings_link' );
 
 function s3spaces_incompatibile($msg) {
@@ -37,10 +36,7 @@ if ( is_admin() && ( !defined('DOING_AJAX') || !DOING_AJAX ) ) {
   if ( version_compare(PHP_VERSION, '5.6.0', '<') ) {
 
     s3spaces_incompatibile(
-      __(
-        'Plugin S3 Spaces Sync requires PHP 5.6.0 or higher. The plugin has now disabled itself.',
-        's3spaces'
-      )
+      __('Plugin S3 Spaces Sync requires PHP 5.6.0 or higher. The plugin has now disabled itself.', 's3spaces')
     );
 
   } elseif ( !function_exists('curl_version')
@@ -55,10 +51,7 @@ if ( is_admin() && ( !defined('DOING_AJAX') || !DOING_AJAX ) ) {
   } elseif (!($curl['features'] & CURL_VERSION_SSL)) {
 
     s3spaces_incompatibile(
-      __(
-        'Plugin S3 Spaces Sync requires that cURL is compiled with OpenSSL. The plugin has now disabled itself.',
-        's3spaces'
-      )
+      __('Plugin S3 Spaces Sync requires that cURL is compiled with OpenSSL. The plugin has now disabled itself.', 's3spaces')
     );
 
   }
@@ -66,4 +59,5 @@ if ( is_admin() && ( !defined('DOING_AJAX') || !DOING_AJAX ) ) {
 }
 
 $instance = S3_Spaces::get_instance();
+
 $instance->setup();
